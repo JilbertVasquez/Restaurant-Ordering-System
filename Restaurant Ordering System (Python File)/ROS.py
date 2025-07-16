@@ -267,23 +267,17 @@ def receipt():
         payment = float(textPayment.get())
         payCash.set(round(payment,2))
         textPayment.config(state = DISABLED)
-        listOfNames = ["Annaliza Averion",
-                       "Jemilyn Abad",
-                       "Beaver Jeddan Reyes",
-                       "Clark Michael Navarro",
-                       "Ar-jay Octa",
-                       "Justin Cyrus Tolentino",
-                       "Jilbert Vasquez"]
+        listOfNames = ["Jilbert Vasquez"]
         while priceOfFood.get() != "":
             textReceipt.config(state=NORMAL)
             textReceipt.delete(1.0,END)
             rannum=random.randint(100,10000)
             restonum="RESTO"+str(rannum)
             date=time.strftime("%d/%m/%Y")
-            ranname = random.randint(1,7)
+            # ranname = random.randint(1,7)
             textReceipt.insert(END,"\n\t\t        JOLLIBEE\n\n")
             textReceipt.insert(END,"Receipt Ref No:\t\t"+restonum+"\t\t\t"+date+"\n")
-            textReceipt.insert(END,"Cashier:\t  " + listOfNames[ranname] + "\t\t\t\n")
+            textReceipt.insert(END,"Cashier:\t  " + listOfNames[0] + "\t\t\t\n")
             textReceipt.insert(END,"***************************************************************************\n")
             textReceipt.insert(END,"Foods:\t\t\t\t\tCost\n")
             textReceipt.insert(END,"***************************************************************************\n")
